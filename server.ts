@@ -8,7 +8,7 @@ app.use(cors());
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: ["https://streamify-cyan.vercel.app/"],
     methods: ["GET", "POST"],
   },
 });
