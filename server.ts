@@ -11,7 +11,7 @@ app.use(cors());
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["https://streamify-cyan.vercel.app", "http://localhost:5173"],
+    origin: ["https://streamify-cyan.vercel.app", "https://sky-pack.vercel.app"],
     methods: ["GET", "POST"],
   },
 });
