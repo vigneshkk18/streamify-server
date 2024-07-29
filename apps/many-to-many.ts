@@ -1,8 +1,8 @@
 import { Namespace, Server } from "socket.io";
-import { ClientToServerEvents, ServerToClientEvents } from "../types/sky-pack-io";
+import { ClientToServerEvents, ServerToClientEvents } from "../types/many-to-many";
 
 export default function initializeStreamifySignalingServer(io: Server) {
-  const skypackIO: Namespace<ClientToServerEvents, ServerToClientEvents> = io.of('/sky-pack');
+  const skypackIO: Namespace<ClientToServerEvents, ServerToClientEvents> = io.of('/many-to-many');
 
   const roomAcceptsPeer = new Map<string, boolean>();
 

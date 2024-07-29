@@ -3,8 +3,8 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 import cors from "cors";
 
-import initializeStreamifySignalingServer from "./apps/streamify";
-import initializeSkyPackSignalingServer from "./apps/sky-pack";
+import initializeStreamifySignalingServer from "./apps/one-to-one";
+import initializeSkyPackSignalingServer from "./apps/many-to-many";
 
 const app = express();
 app.use(cors());

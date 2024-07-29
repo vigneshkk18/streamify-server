@@ -1,7 +1,7 @@
 import { Server } from "socket.io";
 
 export default function initializeStreamifySignalingServer(io: Server) {
-  const streamifyIO = io.of('/streamify');
+  const streamifyIO = io.of('/one-to-one');
 
   streamifyIO.on("connection", (ws) => {
     ws.on("onOffer", ({ roomId, offer, uuid }) => {
